@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+header h1 {
+    margin-top: 10px;
+}
+
+section {
+    margin: 40px 0;
+}
+
+h2 {
+    color: #333;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+.experience ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience li {
+    margin-bottom: 10px;
+}
+
+.projects .project {
+    margin-bottom: 40px;
+}
+
+.projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
