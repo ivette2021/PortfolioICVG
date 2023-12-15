@@ -7,128 +7,37 @@
     <title>Ivette VG - Portafolio</title>
     <!-- Agrega el enlace a la librería Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-   <style>
-    .container{
-        position: relative;
-    }
-    @keyframes aparecerDesvanecer {
-        0%, 100% {
-        opacity: 0;
-    }
-    25%, 75% {
-        opacity: 1;
-    }
-}
-
-
-
-
-@keyframes aparecerDesvanecer2 {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    75%, 25% {
-        opacity: 1;
-    }
-}
-#spanishText,
-#englishText{
-position: absolute;
-opacity: 0;
-}
-#spanishText {
-    animation: aparecerDesvanecer 6s ease-in-out  infinite ; /* Ajusta la duración y el tipo de animación según tus necesidades */
-    
-
-}
-#englishText{
-    animation: aparecerDesvanecer2 6s ease-in-out infinite;/* Ajusta la duración y el tipo de animación según tus necesidades */
-    left: 0;
-    top:0;
-
-}
-   </style>
-
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <img src="images/FotoDePerfil_bg.jpg" alt="Tu Foto">
-            <h1>Ivette Constanza Valdivia Gomez<br><span id="typed-output"></span></h1>
-        </div>
+        <div id="navigation-placeholder" data-source="header.html"></div>
     </header>
 
-    <section class="about">
-      
-        <div class="container">
-            <h2>""</h2>
-            <p id="spanishText">¡Hola! Soy una apasionada desarrolladora Android en constante evolución. 
-                Mi viaje en el mundo de la tecnología comenzó con una formación en ingeniería de automatización y robótica, lo que me ha brindado una base sólida en lógica y resolución de problemas. 
-                Mi inclinación hacia la biotecnología también me ha enseñado la importancia de la precisión y la atención a los detalles. <br><br>
-                
-                En mi búsqueda de conocimiento, he ampliado mi espectro de habilidades para incluir el diseño UX y diseño web. También he adquirido conocimientos de Unity (C#) para el desarrollo de mi tesis de grado. 
-                Esta diversidad de conocimiento me permite crear soluciones integrales que combinan funcionalidad y estética. Mi pasión por el arte se refleja en mi capacidad para diseñar interfaces atractivas y fáciles de usar. <br><br>
-                
-                Me catalogo como una persona altamente organizada y autónoma. Tengo la capacidad para tomar la iniciativa y el hecho de trabajar de manera independiente me ha hecho ser responsable conmigo misma y cumplir con las fechas que me propongo.
-                Mi perseverancia me ha permitido superar desafíos y aprender de cada experiencia.
-            </p>
-        
-            <p id="englishText">Hello! I am a passionate Android developer in constant evolution. 
-                My journey in the world of technology began with a background in automation and robotics engineering, providing me with a solid foundation in logic and problem-solving. 
-                My inclination towards biotechnology has also taught me the importance of precision and attention to detail. <br><br>
-                
-                In my quest for knowledge, I have expanded my skill set to include UX design and web design. I have also gained knowledge in Unity (C#) for the development of my thesis.
-                This diversity of knowledge allows me to create comprehensive solutions that blend functionality and aesthetics. My passion for art is reflected in my ability to design attractive and user-friendly interfaces. <br><br>
-                
-                I consider myself a highly organized and autonomous individual. I have the ability to take initiative, and working independently has made me accountable to myself and has helped me meet deadlines.
-                My perseverance has allowed me to overcome challenges and learn from each experience.
-            </p>
-        
-        </div>
-    </section>
-
-    <section class="experience">
-        <div class="container">
-            <h2>Experiencia</h2>
-            <ul>
-                <li>
-                    Android developer Trainee - Trainee - [MAR - AGO 2023]</li>
-                <!-- Agrega más elementos según tu experiencia -->
-            </ul>
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="container">
-            <h2>Proyectos</h2>
-            <div class="project">
-                <img src="proyecto1.jpg" alt="Proyecto 1">
-                <h3>Nombre del Proyecto 1</h3>
-                <p>Descripción del Proyecto 1.</p>
-            </div>
-            <!-- Repite esta estructura para más proyectos -->
-        </div>
-    </section>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var options = {
-                strings: ["Desarrolladora Android", "Ingeniera de Automatización", "Diseñadora UX"],
-            typeSpeed: 50,  // Velocidad de escritura
-                backSpeed: 30,  // Velocidad de retroceso
-                backDelay: 1000,  // Retraso antes de retroceso
-                startDelay: 2000,  // Retraso antes de comenzar
-                loop: true,  // Repetir
-                showCursor: true,  // Mostrar cursor
-                cursorChar: '|',  // Carácter del cursor
-            };
+    <section class="hero">
+        <img src="images/FotoDePerfil_bg.jpg" alt="Tu Foto">
+        <h1>Ivette Constanza Valdivia Gomez<br><span id="typed-output"></span></h1>
     
-            var typed = new Typed('#typed-output', options);
-        });
-    </script>
+    </section>
+    <section id="about">
 
+            <h2>Acerca de mí</h2>
+           
+    </section>
+
+    <section id="experience">
+        <h2>Experiencia</h2>
+       
+    </section>
+
+    <section id="projects">
+        <h2>Proyectos</h2>
+        <!-- Agrega aquí tus proyectos -->
+    </section>
+
+    <script src="main.js"></script>
+    <script src="scroll.js"></script>
+    <script src="appmobile.js"></script>
+    <script src= "inputHeader.js"></script>
 </body>
 </html>

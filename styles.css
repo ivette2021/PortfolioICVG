@@ -1,58 +1,165 @@
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    font-family: 'nunito', sans-serif;
 }
 
 header {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
 }
 
-header img {
+ img {
+    transition: transform 0.3s; /* Agrega una transición para un efecto suave */
+    width: 180px; /*1 :4*/
+    height: 40px;
+    margin: 20px;
+}
+
+/* Aplica el zoom en hover */
+img:hover {
+    transform: scale(1.2); /* Ajusta el valor según tu preferencia para el zoom */
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav li {
+    margin-right: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    background-color: #63C5B8;
+    width: 100%;
+}
+
+.hero {
+    margin-top: 60px; /* Ajusta el margen superior para evitar que el contenido se solape con la barra de navegación */
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+
+.hero img {
+    border-radius: 50%;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    object-fit: cover;
 }
 
-header h1 {
-    margin-top: 10px;
+#about,
+#experience,
+#projects {
+    padding: 50px;
 }
 
-section {
-    margin: 40px 0;
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
 
-h2 {
-    color: #333;
+/* Estilos adicionales para la cuadrícula de proyectos */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
 
-.about p {
-    line-height: 1.6;
+.project {
+    position: relative;
+    overflow: hidden;
 }
 
-.experience ul {
-    list-style: none;
-    padding: 0;
-}
-
-.experience li {
-    margin-bottom: 10px;
-}
-
-.projects .project {
-    margin-bottom: 40px;
-}
-
-.projects img {
-    max-width: 100%;
+.project img {
+    width: 100%;
     height: auto;
-    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    color: #fff;
+}
+
+.overlay-content a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    display: flex;
+    align-items: flex-end ;
+    margin-right: 20px;
+
 }
