@@ -9,15 +9,20 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #252859;  /* color de todo la barra de navegacion  */
     color: #fff;
     padding: 10px;
     z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
 }
-
+.titulos{
+    padding-top: 20px;
+    text-align: center;
+    font-family: rubik;
+    font-size: 5.0em;
+    
+}
  img {
     transition: transform 0.3s; /* Agrega una transición para un efecto suave */
     width: 180px; /*1 :4*/
@@ -38,8 +43,8 @@ nav {
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
+    display: flex;  /* hace que quede la alineacion nav horizontal  */
+    justify-content: center; /*cenrra el nav*/
     margin: 0;
     padding: 0;
     
@@ -168,7 +173,7 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 20px 60px;
+    padding: 80px 60px;/*el 80 indica el margen de arriba e abajo y el segundo valor va de der e izq */
     margin: auto; /* Centra la grilla */
 }
 #imageGrid .project {
