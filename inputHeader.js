@@ -9,12 +9,7 @@
             var div = document.createElement('div');
             div.innerHTML = xhr.responseText;
                 // Insertar el contenido debajo del encabezado
-                var header = document.querySelector('header');
-                header.parentNode.insertBefore(div, header.nextSibling);
-                var newTitle = div.querySelector('title');
-                if (newTitle) {
-                    document.title = newTitle.textContent;
-                }
+               
         }
     };
 

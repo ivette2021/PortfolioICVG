@@ -1,9 +1,35 @@
 body {
-    margin: 0;
+    padding: 100px;
     font-family: 'nunito', sans-serif;
-    background-color: #F2B441;
+    /* background-color: #F2B441; */ /*amarillo*/
+    background-color: #252859;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    height: 100vh;
+    scrollbar-width: thin;
+    scrollbar-color: #252859 #252859 ;
 }
 
+/* Estilos para la barra de desplazamiento en Edge */
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: #252859 #252859;
+}
+
+body::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento en WebKit */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:#252859; /* Color del "pulgar" de la barra de desplazamiento en WebKit */
+    border-radius: 2px; /* Radio de borde para el "pulgar" de la barra de desplazamiento en WebKit */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #252859; /* Color del fondo de la barra de desplazamiento en WebKit */
+}
 header {
     position: fixed;
     top: 0;
@@ -11,15 +37,24 @@ header {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: #252859;  /* color de todo la barra de navegacion  */
+  background-color: #252859;  /*color de todo la barra de navegacion  */
+    /* background-color: #F2B441; */
     color: #fff;
     padding: 10px;
     z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajusta los valores según tu preferencia */
+}
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
 }
 .titulos{
     padding: 20px;
     text-align: center;
-    font-family: rubik;
+    font-family: Raleway;
     font-size: 5.0em;
     
 }
@@ -78,10 +113,20 @@ nav a.active::after {
 }
 
 .hero {
-    margin-top: 60px; /* Ajusta el margen superior para evitar que el contenido se solape con la barra de navegación */
+    bottom: 0;
+    left: 0;
+    margin: auto; /* Ajusta el margen superior para evitar que el contenido se solape con la barra de navegación */
     text-align: center;
-    padding: 50px;
-    background-color: #f4f4f4;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 350px;
+    font-family: Nunito;
+    background: #63C5B8;
+   
+    
+    /* background-color: #f4f4f4; */
 }
 
 
@@ -169,30 +214,30 @@ a {
     margin-right: 20px;
 }
 /* Centra la grilla de las fotos  app mobile*/
-#imageGrid {
+.imageGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding:0px 80px;/*el 80 indica el margen de arriba e abajo y el segundo valor va de der e izq */
     margin: auto; /* Centra la grilla */
 }
-#imageGrid .project {
+.imageGrid .project {
     position: relative;
     overflow: hidden;
     border-radius: 40px; /* Añade bordes redondeados al contenedor, ajusta el valor según tus preferencias */
 }
-#imageGrid .project img {
+.imageGrid .project img {
     width: 100%;
     height: 500px;
     object-fit: cover; /* Ajusta la propiedad para unificar los tamaños manteniendo la proporción */
     transition: transform 0.3s, filter 0.3s; /* Agrega la transición para el zoom y el oscurecimiento */
     transform: scale(1.1);
 }
-#imageGrid .project:hover img {
+.imageGrid .project:hover img {
     transform: scale(1.3);
     filter: brightness(70%); /* Oscurece la imagen al pasar el cursor */
 }
-#imageGrid .overlay {
+.imageGrid .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -206,19 +251,77 @@ a {
     justify-content: center;
     flex-direction: column; /* Añade un diseño de columna para el contenido */
 }
-#imageGrid .project:hover .overlay {
+.imageGrid .project:hover .overlay {
     opacity: 1;
 }
-#imageGrid .overlay-content {
+.imageGrid .overlay-content {
     text-align: center;
     color: #fff;
 }
-#imageGrid .overlay-content a {
+.imageGrid .overlay-content a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
-#imageGrid .overlay-content h3 {
+.imageGrid .overlay-content h3 {
     margin: 0;
     font-size: 1.5em; /* Ajusta el tamaño del título según sea necesario */
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca las partículas detrás del contenido principal */
+}
+/* card  de acerca de mi */
+.card {
+    display: flex;
+    
+    max-width: 1000px; /* Ajusta el ancho máximo de la tarjeta según sea necesario */
+    margin: 20px;
+    align-items: center; /* Alinea el contenido al centro horizontalmente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #F2B441;
+    border-radius: 40px;
+}
+
+.card-image {
+      width: 50%;
+            padding: 20px;
+            text-align: center; /* Ajusta la alineación de la imagen según sea necesario */
+        }
+
+.card-image img {
+    width: 100%;
+    height: 100%; /* Ajusta para que la imagen no se estire */
+    object-fit: cover;
+}
+
+.card-content {
+    width: 70%;
+    padding: 40px;
+    font-family: Metrophobic;
+    text-align: left; /* Ajusta la alineación del texto según sea necesario */
+}
+
+.card h1 {
+    font-family: Nunito;
+    font-size: 30px;
+    color: #252859;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #252859;
+    line-height: 1.6;
+}
+#figuraRara_1 {
+height: 100px;
+margin: 40px;
+background: #63C5B8;
+border-bottom-right-radius: 100px;
 }
