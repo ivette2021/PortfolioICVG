@@ -1,5 +1,6 @@
 body {
-    padding: 100px;
+    margin-top: 100px;
+    padding: 0;
     font-family: 'nunito', sans-serif;
     /* background-color: #F2B441; */ /*amarillo*/
     background-color: #252859;
@@ -53,6 +54,7 @@ header {
 }
 .titulos{
     padding: 20px;
+    color: #fff;
     text-align: center;
     font-family: Raleway;
     font-size: 5.0em;
@@ -93,6 +95,11 @@ nav a {
     text-decoration: none;
     color: #fff;
     position: relative;
+}
+nav a.active {
+    background-color: #63C5B8;
+    color: #fff;
+    
 }
 
 nav a::after {
@@ -140,13 +147,6 @@ nav a.active::after {
 #experience,
 #projects {
     padding: 50px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
 }
 
 /* Estilos adicionales para la cuadrícula de proyectos */
@@ -217,7 +217,7 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding:0px 80px;/*el 80 indica el margen de arriba e abajo y el segundo valor va de der e izq */
+    padding:0px 200px;/*el 80 indica el margen de arriba e abajo y el segundo valor va de der e izq */
     margin: auto; /* Centra la grilla */
 }
 .imageGrid .project {
@@ -278,9 +278,8 @@ a {
 /* card  de acerca de mi */
 .card {
     display: flex;
-    
     max-width: 1000px; /* Ajusta el ancho máximo de la tarjeta según sea necesario */
-    margin: 20px;
+    margin: 200px;
     align-items: center; /* Alinea el contenido al centro horizontalmente */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #F2B441;
@@ -296,7 +295,8 @@ a {
 .card-image img {
     width: 100%;
     height: 100%; /* Ajusta para que la imagen no se estire */
-    object-fit: cover;
+    
+    border-radius: 40px;
 }
 
 .card-content {
@@ -323,4 +323,49 @@ height: 100px;
 margin: 40px;
 background: #63C5B8;
 border-bottom-right-radius: 100px;
+}
+
+/* parte del footer */
+footer {
+    background-color: #63C5B8;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-b img {
+    max-width: 100%;
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+}
+.social-icons a:hover img {
+    background-color: #63C5B8; /* Cambia al color turquesa en hover */
+    border: 2px solid #63C5B8; /* Añade un borde blanco en hover */
+}
+
+.copyright {
+    margin-top: 20px;
 }
