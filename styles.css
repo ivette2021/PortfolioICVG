@@ -45,6 +45,21 @@ header {
     z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajusta los valores según tu preferencia */
 }
+#inicioh2{
+    color: #63BFAE;
+    font-size: 40px;
+    font-family: Raleway;
+}
+#inicioh3{
+    color: #fff;
+    font-size: 20px;
+}
+#inicioh4{
+    color: #63BFAE;
+}
+#iniciop{
+    color: #fff;
+}
 .contenedor{
     padding: 60px 0;
     width: 90%;
@@ -60,6 +75,7 @@ header {
     font-size: 5.0em;
     
 }
+
  img {
     transition: transform 0.3s; /* Agrega una transición para un efecto suave */
     width: 180px; /*1 :4*/
@@ -75,6 +91,7 @@ img:hover {
 nav {
     flex: 1;
     text-align: center;
+  
     
 }
 
@@ -96,6 +113,15 @@ nav a {
     color: #fff;
     position: relative;
 }
+#marker{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 90px;
+    border-bottom: #63C5B8;
+    background: linear-gradient(0deg,#63C5B8,transparent);
+}
+
 nav a.active {
     background-color: #63C5B8;
     color: #fff;
@@ -367,3 +393,44 @@ footer {
 #separadorImagen {
     margin-bottom: 40px;
 }
+
+  .linea-con-punto {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff00; /* Color del espacio */
+  }
+  
+  .linea-con-punto::before,
+  .linea-con-punto::after {
+    content: "";
+    flex: 1;
+    height: 3px;
+    background-color:  #63C5B8; /* Color de la línea */
+    border-radius: 10px;
+  }
+  
+  .linea-con-punto::before {
+    margin-right: 10px; /* Espacio a la derecha del punto */
+  }
+  
+  .linea-con-punto::after {
+    margin-left: 10px; /* Espacio a la izquierda del punto */
+  }
+  
+  .punto {
+    position: relative;
+    width: 10px; /* Tamaño del punto */
+    height: 10px;
+    background-color:  #63C5B8; /* Color del punto */
+    border-radius: 50%;
+  }
+  .linea-punteada {
+    border-top: 4px dotted #F2B441; /* Altura de la línea punteada y color */
+    width: 100%; /* Ancho de la línea */
+    height: 0; /* Asegura que la altura sea cero para líneas horizontales */
+    margin: 40px 0; /* Espaciado alrededor de la línea */
+  }
+ 
