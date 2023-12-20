@@ -320,7 +320,7 @@ a {
 }
 #figuraRara_1 {
 height: 100px;
-margin: 40px;
+
 background: #63C5B8;
 border-bottom-right-radius: 100px;
 }
@@ -329,7 +329,6 @@ border-bottom-right-radius: 100px;
 footer {
     background-color: #63C5B8;
     color: #fff;
-    padding: 20px;
     text-align: center;
 }
 .footer-content {
@@ -339,18 +338,17 @@ footer {
 }
 
 .logo-b img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    
 }
 
 .social-icons a {
-    margin: 0 10px;
     display: flex;
     align-items: center;
 }
@@ -361,11 +359,11 @@ footer {
     border-radius: 50%;
     
 }
-.social-icons a:hover img {
-    background-color: #63C5B8; /* Cambia al color turquesa en hover */
-    border: 2px solid #63C5B8; /* Añade un borde blanco en hover */
-}
 
 .copyright {
-    margin-top: 20px;
+   
+    font-size: 14px; /* Ajusta el tamaño de fuente del texto de copyright */
+}
+#separadorImagen {
+    margin-bottom: 40px;
 }
