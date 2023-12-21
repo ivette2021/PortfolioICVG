@@ -119,11 +119,11 @@ nav a {
     height: 100%;
     width: 90px;
     border-bottom: #63C5B8;
-    background: linear-gradient(0deg,#63C5B8,transparent);
+    
 }
 
 nav a.active {
-    background-color: #63C5B8;
+    color: #63BFAE;
     color: #fff;
     
 }
