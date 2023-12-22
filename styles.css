@@ -68,8 +68,9 @@ header {
     overflow: hidden;
 }
 .titulos{
-    padding: 20px;
+    margin: 100px auto;
     color: #fff;
+    max-width: 980px;/* esta tamaño no se ajusta a los diferentes textos largo */
     text-align: center;
     font-family: Raleway;
     font-size: 5.0em;
