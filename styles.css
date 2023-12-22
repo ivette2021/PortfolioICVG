@@ -73,7 +73,31 @@ header {
     text-align: center;
     font-family: Raleway;
     font-size: 5.0em;
+    position: relative;
     
+}
+.titulos:before{
+    background-color: #fff;
+    display: block;
+    width: 120px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+}
+
+.titulos::after{
+    background-color: #fff;
+    display: block;
+    width: 120px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -1;
 }
 
  img {
