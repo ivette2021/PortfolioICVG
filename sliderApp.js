@@ -40,7 +40,3 @@ dots.forEach((li,key) => {
         reloadSlider();
     })
 }) 
-.scroll {
-    position:absolute;
-    color:#f
-}
