@@ -2,13 +2,13 @@ let list = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let dots = document.querySelectorAll('.slider .dots li');
 let prev = document.getElementById('prev');
-let next = document.getElementById('net');
+let next = document.getElementById('next');
 
 let active = 0;
 let lenghtItems = items.length -1;
 
 next.onclick = function(){
-    if (active += 1 > lenghtItems) {
+    if (active + 1 > lenghtItems) {
         active =0;
     }else{
         active = active + 1;
@@ -23,7 +23,7 @@ prev.onclick = function(){
     }
     reloadSlider();
 }
-let refreshSlider = setInterval(() => {next.click()}, 3000);
+let refreshSlider = setInterval(() => {next.click()}, 5000);
 
 function reloadSlider(){
     let checkLeft = items[active].offsetLeft;
@@ -39,4 +39,8 @@ dots.forEach((li,key) => {
         active = key;
         reloadSlider();
     })
-})
+}) 
+.scroll {
+    position:absolute;
+    color:#f
+}
