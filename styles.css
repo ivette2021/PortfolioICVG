@@ -530,3 +530,59 @@ footer {
         height: 300px;
     }
  }
+
+ .scroll{
+    position: absolute;
+    color: #F2B441;
+    font-weight: 300;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+ }
+
+ .mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    user-select: none;
+    mix-blend-mode: screen;
+ }
+.projectTri{
+    margin-left: 500px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   width: 800px;  /* ayuda a que se distribuyan en horizontal trinagulos puede aumentar las columnas de trianglulos o disminuir */
+   gap: 10px;
+}
+.projectTri .img2  {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 -75px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+.projectTri .img2:nth-child(2){
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.projectTri .img2:nth-child(4){
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.projectTri .img2:nth-child(7){
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.projectTri .img2:hover{
+
+    transform: scale(0.8);
+    filter: brightness(70%);
+}
+.projectTri .img2 {
+    transition: 0.5s;
+}
