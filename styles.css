@@ -10,6 +10,7 @@ body {
     height: 100vh;
     scrollbar-width: thin;
     scrollbar-color: #252859 #252859 ;
+    overflow: hidden;
 }
 
 /* Estilos para la barra de desplazamiento en Edge */
@@ -20,7 +21,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 12px; /* Ancho de la barra de desplazamiento en WebKit */
+    width: 10px; /* Ancho de la barra de desplazamiento en WebKit */
 }
 
 body::-webkit-scrollbar-thumb {
@@ -541,6 +542,7 @@ footer {
  }
 
  .mask{
+    margin-top: 100px;
     position: absolute;
     top: 0;
     left: 0;
@@ -551,21 +553,21 @@ footer {
     mix-blend-mode: screen;
  }
 .projectTri{
-    margin-left: 500px;
+    margin-left: 400px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-   width: 800px;  /* ayuda a que se distribuyan en horizontal trinagulos puede aumentar las columnas de trianglulos o disminuir */
-   gap: 10px;
+   width: 1100px;  /* ayuda a que se distribuyan en horizontal trinagulos puede aumentar las columnas de trianglulos o disminuir */
+   gap: 29px;
 }
 .projectTri .img2  {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 340px;
+    height: 340px;
     overflow: hidden;
-    margin: 0 -75px;
+    margin: 0 -85px;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 .projectTri .img2:nth-child(2){
@@ -585,4 +587,23 @@ footer {
 }
 .projectTri .img2 {
     transition: 0.5s;
+}
+.scroll {
+    position: absolute;
+    color: #f3c892;
+    font-weight: 300;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background-image: linear-gradient(to top, rgb(157, 167, 165), rgb(121, 124, 124));
 }

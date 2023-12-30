@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.scroll {
+    position: absolute;
+    color: #f3c892;
+    font-weight: 300;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background-image: linear-gradient(to top, rgb(157, 167, 165), rgb(121, 124, 124));
+}
