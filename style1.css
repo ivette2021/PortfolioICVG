@@ -4,6 +4,7 @@ body{
     box-sizing: border-box;
     font-family: 'nunito', sans-serif;
     background-color: #252859;
+    overflow-x: hidden;
 }
 .header {
     display: flex;
