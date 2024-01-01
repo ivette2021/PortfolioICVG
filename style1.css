@@ -103,7 +103,9 @@ background: #F2B441;/* fondo*/
 transition: 0.5s;
 padding: 20px;
 }
-.container#blur.active
+.container#blur.active,
+.container#blur2.active,
+.container#blur3.active
 {
     filter :blur(20px);
     pointer-events: none;
