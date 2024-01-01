@@ -5,6 +5,9 @@ body{
     font-family: 'nunito', sans-serif;
     background-color: #252859;
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: #252859 #252859;
 }
 .header {
     display: flex;
@@ -103,77 +106,7 @@ background: #F2B441;/* fondo*/
 transition: 0.5s;
 padding: 20px;
 }
-.container#blur.active,
-.container#blur2.active,
-.container#blur3.active
-{
-    filter :blur(20px);
-    pointer-events: none;
-    user-select:none;
-}
-.container .content
-{
-    position: relative;
-    max-width: 800px;
-}
-h2{
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;/* boton read more */
-    text-align: center;
-    font-family: Raleway;
-    font-size: 5.0em;
-}
-.container .content img
-{
-    max-width: 100%;
-    display: block;
-}
-#popup1 .btn1 a,
-#popup2 .btn1 a,
-#popup3 .btn1 a {
-    position:relative;
-    padding:5px 20px;
-    display: inline-block;
-    font-family: 'nunito';
-    margin-top: 20px;
-    text-decoration: none;
-    background: #ff7474;  /* color del botón read more */
-    color: #252859;
-    border-radius: 10px; /* radio de borde redondeado */
-    z-index: 1;
-}
 
-#popup1 .btn1 a:hover,
-#popup2 .btn1 a:hover,
-#popup3 .btn1 a:hover {
-    background: #d26b6b; /* color de fondo al pasar el mouse */
-}
-#popup1,
-#popup2,
-#popup3
-{
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 600px;
-    padding: 50px;
-    box-shadow:0 5px 30px rgba(0,0,0,.50);
-    background:#63BFAE;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
-    border-radius: 20px;
-}
-#popup1.active,
-#popup2.active,
-#popup3.active{
-    top: 50%;
-    visibility: visible;
-    opacity: 1;
-    transition: 0.5s;
-}
 
 /* parte del footer */
 footer {
@@ -214,7 +147,124 @@ footer {
    
     font-size: 14px; /* Ajusta el tamaño de fuente del texto de copyright */
 }
-.imgUx{
-    width: 100% !important; 
-    height: auto !important;
+/* parte de navegador de diapositivas */
+.slider{
+    width: 1468px;
+    max-width: 100vw;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+ }
+ .list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+    transition: 1s;
+ }
+ #imagenApp{
+    width: 1468px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+ }
+ .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+ }
+ .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F25764;
+    color: #fff;
+    border: none;
+    font-family: Raleway;
+    font-weight: bold;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
+ }
+ .dots{
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+ }
+ .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #F25764;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+    box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.8);
+
+ }
+ .dots li.active{
+    width: 30px;
+ }
+
+ @media screen and (max-width: 768px){
+    .slider{
+        height: 300px;
+    }
+ }
+
+ #particles-js { /*hace que se integre mejor wl fondo particulas*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca las partículas detrás del contenido principal */
+}
+.titulos{
+    padding-top: 10px;
+    margin: 100px auto;
+    color: #fff;
+    max-width: 980px;/* esta tamaño no se ajusta a los diferentes textos largo */
+    text-align: center;
+    font-family: Raleway;
+    font-size: 5.0em;
+    position: relative;
+    
+}
+.titulos:before{
+    background-color: #fff;
+    display: block;
+    width: 120px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+}
+
+.titulos::after{
+    background-color: #fff;
+    display: block;
+    width: 120px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -1;
 }
