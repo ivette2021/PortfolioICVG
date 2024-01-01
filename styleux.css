@@ -115,6 +115,7 @@ padding: 20px;
 {
     position: relative;
     max-width: 800px;
+    text-align: center;
 }
 h2{
     
@@ -152,25 +153,41 @@ h2:after{
     max-width: 100%;
     display: block;
 }
-#popup1 .btn1 a,
-#popup2 .btn1 a,
-#popup3 .btn1 a {
-    position:relative;
-    padding:5px 20px;
+.btn1 {
     display: inline-block;
-    font-family: 'nunito';
-    margin-top: 20px;
+    padding: 20px 20px;
+    margin: 10px auto; /* Centra el botón horizontalmente */
+    padding: 15px 30px; /* Ajusta el padding para hacer el botón más grande */
     text-decoration: none;
-    background: #ff7474;  /* color del botón read more */
-    color: #252859;
-    border-radius: 10px; /* radio de borde redondeado */
-    z-index: 1;
+    color: #fff;
+    background-color: #63C5B8;  
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#popup1 .btn1 a:hover,
-#popup2 .btn1 a:hover,
-#popup3 .btn1 a:hover {
-    background: #d26b6b; /* color de fondo al pasar el mouse */
+
+#popup1 .btn1,
+#popup2 .btn1,
+#popup3 .btn1 {
+    position:relative;
+    margin: 20px auto; /* Centra el botón horizontalmente */
+    padding: 15px 30px; /* Ajusta el padding para hacer el botón más grande */
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'nunito';
+    font-size: 16px;
+    text-decoration: none;
+    background: #ff7474;  /* color del botón read more */
+    color: #ffffff ;
+    border-radius: 20px; /* radio de borde redondeado */
+    z-index: 1;
+}
+.btn1:hover {
+    background-color: #53a499;
 }
 #popup1,
 #popup2,
@@ -254,6 +271,7 @@ footer {
   
   .linea-con-punto::before,
   .linea-con-punto::after {
+    margin-top: 20px;
     content: "";
     flex: 1;
     height: 3px;
