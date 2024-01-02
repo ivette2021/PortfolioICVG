@@ -13,9 +13,10 @@
 <header>
     <div id="navigation-placeholder" data-source="header.html"></div>
 </header>
-<h1 class = titulos>Android</h1>
+
 <section class="contact">
     <h2>Contact Me!</h2>
+
     <form action="#">
         <div class="input-box">
             <div class="input-field field">
@@ -24,7 +25,7 @@
             </div>
             <div class="input-field field">
                 <input type ="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
-                <div class="error-txt">Email Address can't be blank</div>
+                <div class="error-txt email">Email Address can't be blank</div>
             </div>
         </div>
         <div class="input-box">
@@ -38,11 +39,10 @@
             </div>
         </div>
         <div class="textarea-field field">
-            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off">
-            </textarea>
+            <textarea id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
             <div class="error-txt">Message can't be blank</div>
         </div>
-        <buttom type="submit">Send Message</buttom>
+        <button type="submit">Send Message</button>
     </form>
 </section>
 
@@ -50,8 +50,9 @@
 <footer>
     <div id="footer-placeholder" data-source="footer.html"></div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="form.js"></script>
+<script src="/js/form.js"></script>
 <script  src="activeMarkerPage.js"></script>
 <script src= "inputHeader.js"></script>
 <script src="app.js"></script>

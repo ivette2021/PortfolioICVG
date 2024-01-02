@@ -2,15 +2,15 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'nunito', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body{
-    display: flex;
+    margin-top: 100px;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #252859;
+    background: #252859;
     overflow-x: hidden;
 }
 .header {
@@ -100,7 +100,7 @@ nav a.active::after {
 
 .contact h2{
     font-size: 40px;
-    color: #63BFAE;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -119,13 +119,17 @@ form .input-box{
     width: 100%;
     padding: 18px;
     background: transparent;
-    border: 2px solid #63BFAE;
+    border: 2px solid #83fde7;
     outline: none;
     border-radius: 6px;
     font-size: 16px;
-    color: #fff;
+    color: #ededed;
     margin: 12px 0;
 }
+.field.error .item{
+border-color: #F25764;
+}
+
 .field .item::placeholder{
     color: rgb(210, 210, 210);
 }
@@ -135,6 +139,9 @@ form .input-box{
     text-align: left;
     margin: -5px 0 10px;
     display: none;
+}
+.field.error .error-txt{
+    display: block;
 }
 form .textarea-field .item{
     resize: none;
@@ -155,10 +162,13 @@ form button{
     font-weight: 600;
     cursor: pointer;
     margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 /* parte del footer */
 footer {
+    margin-top: 20px;
     background-color: #63C5B8;
     color: #fff;
     text-align: center;
