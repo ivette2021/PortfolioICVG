@@ -97,23 +97,31 @@ nav a.active::after {
 .img1:hover {
     transform: scale(1.2); /* Ajusta el valor según tu preferencia para el zoom */
 }
-
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px; /* Ajusta el espacio interno del formulario */
+}
 .contact h2{
     font-size: 40px;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 10px;
+    
 }
 .contact form{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     text-align: center;
 }
 form .input-box{
     display: flex;
+    flex-wrap: wrap;/* Los elementos flexibles se envolverán en líneas adicionales si no hay suficiente espacio en la línea actual.*/
     justify-content: space-between;
 }
 .input-box .input-field{
-    width: 48.5%;
+    width: 48.5%;/* Ajusta el ancho de los campos de entrada */
 }
 .field .item{
     width: 100%;
