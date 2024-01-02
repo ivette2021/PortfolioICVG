@@ -95,12 +95,11 @@ nav a.active::after {
 {
    position:relative;
    width:100%;
-   min-height:100vh;
    display: flex;
    justify-content: center;
    align-items: center;
    transition: 0.5s;
-   padding: 20px;
+   
 }
 .container#blur.active,
 .container#blur2.active,
@@ -117,7 +116,7 @@ nav a.active::after {
     text-align: center;
 }
 h2{
-    
+
     margin-bottom: 10px;
     color: #fff;/* boton read more */
     text-align: center;
@@ -125,7 +124,10 @@ h2{
     font-size: 5.0em;
     text-transform: uppercase;
 }
+.titulo1 {
+    padding-top: 50px; /* Ajusta el valor según tus necesidades */
 }
+
 h2:before{
     background-color: #fff;
     display: block;
@@ -157,6 +159,7 @@ h2:after{
 .btn1 {
     display: inline-block;
     margin-top: 30px;
+    margin-bottom: 20px;
     padding: 20px 30px; /* Ajusta el padding para hacer el botón más grande */
     text-decoration: none;
     color: #fff;
@@ -290,7 +293,7 @@ footer {
   
   .linea-con-punto::before,
   .linea-con-punto::after {
-    margin-top: 20px;
+    margin-top: 40px;
     content: "";
     flex: 1;
     height: 3px;
