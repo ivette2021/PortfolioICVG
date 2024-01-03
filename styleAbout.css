@@ -1,0 +1,130 @@
+body {
+    margin-top: 100px;
+    padding: 0;
+    font-family: 'nunito', sans-serif;
+    /* background-color: #F2B441; */ /*amarillo*/
+    background-color: #252859;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    height: 100vh;
+    /* Estilos para la barra de desplazamiento en Edge */
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: #252859 #252859;
+}
+body::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento en WebKit */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:#252859; /* Color del "pulgar" de la barra de desplazamiento en WebKit */
+    border-radius: 2px; /* Radio de borde para el "pulgar" de la barra de desplazamiento en WebKit */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #252859; /* Color del fondo de la barra de desplazamiento en WebKit */
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca las partículas detrás del contenido principal */
+}
+/* card  de acerca de mi */
+.card {
+    display: flex;
+    max-width: 1000px; /* Ajusta el ancho máximo de la tarjeta según sea necesario */
+    margin: 200px;
+    align-items: center; /* Alinea el contenido al centro horizontalmente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #F2B441;
+    border-radius: 40px;
+}
+
+.card-image {
+      width: 50%;
+            padding: 20px;
+            text-align: center; /* Ajusta la alineación de la imagen según sea necesario */
+        }
+
+.card-image img {
+    width: 100%;
+    height: 100%; /* Ajusta para que la imagen no se estire */
+    
+    border-radius: 40px;
+}
+
+.card-content {
+    width: 70%;
+    padding: 40px;
+    font-family: Metrophobic;
+    text-align: left; /* Ajusta la alineación del texto según sea necesario */
+}
+
+.card h1 {
+    font-family: Nunito;
+    font-size: 30px;
+    color: #252859;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #252859;
+    line-height: 1.6;
+}
+
+
+/* parte del footer */
+footer {
+    background-color: #63C5B8;
+    color: #fff;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*logo footer*/
+.img1 {
+    transition: transform 0.3s; /* Agrega una transición para un efecto suave */
+    width: 180px; /*1 :4*/
+    height: 40px;
+    margin: 20px;
+}
+/* Aplica el zoom en hover */
+.img1:hover {
+    transform: scale(1.2); /* Ajusta el valor según tu preferencia para el zoom */
+}
+.logo-b img {
+    max-width: 60%;
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+}
+
+.copyright {
+   
+    font-size: 14px; /* Ajusta el tamaño de fuente del texto de copyright */
+}
