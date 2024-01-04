@@ -1,3 +1,14 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    display: flex;
+    align-items: flex-end ;
+    margin-right: 20px;
+}
 header {
     position: fixed;
     top: 0;
@@ -45,7 +56,12 @@ nav a {
     border-bottom: #63C5B8;
     
 }
-
+.img1 {
+    transition: transform 0.3s; /* Agrega una transición para un efecto suave */
+    width: 180px; /*1 :4*/
+    height: 40px;
+    margin: 20px;
+}
 nav a.active {
     color: #63BFAE;
     color: #fff;
@@ -69,14 +85,7 @@ nav a.active::after {
     width: 100%;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-a {
-    display: flex;
-    align-items: flex-end ;
-    margin-right: 20px;
+/* Aplica el zoom en hover */
+.img1:hover {
+    transform: scale(1.2); /* Ajusta el valor según tu preferencia para el zoom */
 }

@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
             // Insertar el contenido del footer.html en el contenedor
             footerContainer.innerHTML = this.responseText;
         }
+          // Crear un elemento link para el archivo CSS
+          var linkElement = document.createElement('link');
+          linkElement.rel = 'stylesheet';
+          linkElement.href = 'footer.css'; // Reemplaza con la ruta correcta de tu archivo CSS
+  
+          // Añadir el enlace al head del documento
+          document.head.appendChild(linkElement);
     };
     xhr.open("GET", "footer.html", true);
     xhr.send();
