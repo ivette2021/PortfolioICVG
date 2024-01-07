@@ -86,7 +86,8 @@ body::-webkit-scrollbar-track {
 .container#blur2.active,
 .container#blur3.active,
 .container#blur4.active,
-.container#blur5.active
+.container#blur5.active,
+.container#blur6.active
 {
     filter :blur(20px);
     pointer-events: none;
@@ -99,8 +100,8 @@ body::-webkit-scrollbar-track {
     margin-bottom: 20px;
     padding: 20px 30px; /* Ajusta el padding para hacer el botón más grande */
     text-decoration: none;
-    color: #fff;
-    background-color: #63C5B8;  
+    color: #000000;
+    background-color:#ff7474;  
     border: none;
     font-weight: bold;
     font-size: 16px;
@@ -113,29 +114,35 @@ body::-webkit-scrollbar-track {
 #popup2 .btn1,
 #popup3 .btn1,
 #popup4 .btn1,
-#popup5 .btn1 {
+#popup5 .btn1,
+#popup6 .btn1 {
     position:relative;
     margin: 20px auto; /* Centra el botón horizontalmente */
     padding: 15px 30px; /* Ajusta el padding para hacer el botón más grande */
     display: inline-block;
     font-weight: bold;
-    font-family: 'Metrophonic', sans-serif;
+    font-family: 'nunito', sans-serif;
     font-size: 16px;
     text-decoration: none;
     background: #ff7474;  /* color del botón read more */
     box-shadow:0 5px 10px rgba(0,0,0,.5);
-    color: #ffffff ;
+    color: #000000 ;
     border-radius: 20px; /* radio de borde redondeado */
 
 }
 .btn1:hover {
-    background-color: #53a499;
+    background-color: #d45f5f;
+    color: #fff;
+    transform: scale(1.1);
+    transition: ease-in-out;
+  
 }
 #popup1,
 #popup2,
 #popup3,
 #popup4,
-#popup5 
+#popup5,
+#popup6  
 {
     position: fixed;
     top: 40%;
@@ -156,7 +163,8 @@ body::-webkit-scrollbar-track {
 #popup2.active,
 #popup3.active,
 #popup4.active,
-#popup5.active{
+#popup5.active,
+#popup6.active{
     top: 50%;
     visibility: visible;
     opacity: 1;
@@ -212,7 +220,6 @@ body::-webkit-scrollbar-track {
     top: 50%;
     z-index: -1;
 }
-
 
 #particles-js {
    position: fixed;
