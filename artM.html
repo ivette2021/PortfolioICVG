@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleart.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
@@ -15,71 +15,154 @@
 
 <h1 class = titulos>ILLUSTRATION</h1>
 
-<section class="imageGrid" class="grid-container">
-    <!-- Imágenes para la grilla -->
+<section class="imageGrid">
+    <div class="container" id="blur">
     <div class="project">
         <img src="images/dinainmitaDITYS.jpg" alt="Imagen 1">
         <div class="overlay">
             <div class="overlay-content">
                 <h3>DTYS</h3>
-                <a href="#">View details</a>
+                <button class="btn1" onclick="toggle('popup1','blur')">View details</button>
             </div>
         </div>
     </div>
-    <div class="project">
+</div>
+    <div id="popup1">
+        <h3>DTYS</h3>
+        <p class="parrafo">hello everyone, I did a DTIYS (Draw this in your style) of the illustrator
+              @dinainmita about a ballet dancer on halloween, I wanted 
+              to make an atmosphere where the dancer danced with the bats as in the 
+              scene of Cinderella with the birds, thanks for the challenge!!!! I liked
+               the challenge since it required me to think well about the scenario of
+                how to work better with perspective, work with animals and give that 
+                touch of a gloomy setting, and to add a little more sadness I added a
+                 headdress inspired by the work of Piotr Ilich Tchaikovsky , "Swan Lake"</p>
+                 <div class="social-icons">
+            <a href="#" target="_blank"><img class="img2Coso"  src="icons/clip_studio_paint_icon.png" alt="CSP"></a>
+        </div>
+        <button class="btn1" onclick="toggle('popup1','blur')">Close</button>
+    </div>
+    <div class="container" id="blur2">
+     <div class="project">
         <img src="images/chicaAnimeOC_2.jpg" alt="Imagen 2">
         <div class="overlay">
             <div class="overlay-content">
                 <h3>"THE ARTIST'S ILLUSION"</h3>
-                <a href="#">View details</a>
+                <button class="btn1" onclick="toggle('popup2','blur2')">View details</button>
             </div>
         </div>
+       </div>
      </div>
+     <div id="popup2">
+        <h3>"THE ARTIST'S ILLUSION"</h3>
+        <p class="parrafo">hello everyone, I hope you have a good start to the week, 
+        I made an illustration for a contest unfortunately I couldn't
+         upload it, the theme was illustrate your world, I wanted to 
+         make a brave girl who illustrates non-stop, but who can immerse
+          herself in her imagination and feel how the colors flow while
+           creating your works, I hope you like digital illustration, greetings</p>
+           <div class="social-icons">
+            <a href="#" target="_blank"><img class="img2Coso"  src="icons/clip_studio_paint_icon.png" alt="CSP"></a>
+        </div>
+        <button class="btn1" onclick="toggle('popup2','blur2')">Close</button>
+    </div>
 </section>
 
     <h1 class = titulos>GRAPHIC DESIGN</h1>
 
-<section class="imageGrid" class="grid-container">
+<section class="imageGrid">
+    <div class="container" id="blur3">
     <div class="project">
         <img src="images/catalogo_Paletizado_SR.png" alt="Imagen 3">
         <div class="overlay">
             <div class="overlay-content">
                 <h3>BROCHURE</h3>
-                <a href="#">View details</a>
+                <button class="btn1" onclick="toggle('popup3','blur3')">View details</button>
             </div>
         </div>
     </div>
+</div>
+    <div id="popup3">
+        <h3>BROCHURE</h3>
+        <p class="parrafo">I created this catalog for a company in the robotics industry.
+             The request was to showcase the robot models available for sale, highlighting
+              their advantages and disadvantages, features, uses, required infrastructure,
+               and accessories. The photos were retouched in Photoshop, and the catalog was 
+               designed using Illustrator.</p>
+               <div class="social-icons">
+                <a href="#" target="_blank"><img  class="img2" src="icons/photoshop_icon.png" alt="Photoshop"></a>
+                <a href="#" target="_blank"><img class="img2"  src="icons/illustrator_icon.png" alt="illustrator"></a>
+            </div>
+        <button class="btn1" onclick="toggle('popup3','blur3')">Close</button>
+    </div>
+
+    <div class="container" id="blur4">
+        <div class="project">
+            <img src="images/diseñoDeIconos.png" alt="Imagen 3">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h3>ICONS</h3>
+                    <button class="btn1" onclick="toggle('popup4','blur4')">View details</button>
+                </div>
+            </div>
+            
+        </div>  
+    </div>
+    <div id="popup4">
+        <h3>ICONS</h3>
+        <p class="parrafo">I designed these icons for the robotics company's catalog, maintaining<br>
+             consistency in color selection to align with the company's personal brand.<br>
+              the icons was designed using Illustrator.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><img class="img2"  src="icons/illustrator_icon.png" alt="illustrator"></a>    
+        </div>
+        <button class="btn1" onclick="toggle('popup4','blur4')">Close</button>
+    </div>
+
+
+    <div class="container" id="blur5">
     <div class="project">
-        <img src="images/diseñoDeIconos.png" alt="Imagen 3">
-        <div class="overlay">
-            <div class="overlay-content">
-                <h3>ICONS</h3>
-                <a href="#">View details</a>
-            </div>
-        </div>
-    </div>
-    <div class="project" id = separadorImagen>
         <img src="images/pendon.png" alt="Imagen 3">
         <div class="overlay">
             <div class="overlay-content">
                 <h3>BANNER</h3>
-                <a href="#">View details</a>
+                <button class="btn1" onclick="toggle('popup5','blur5')">View details</button>
             </div>
         </div>
+    </div>    
     </div>
-    <div class="scroll" id="scroll" onclick="scrollDown()">scroll</div>
-<div class="line"></div>
- 
+    <div id="popup5">
+        <h3>BANNER</h3>
+                <p class="parrafo">I crafted this banner for the same company with the aim of promoting its services at a business fair.</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img  class="img2" src="icons/photoshop_icon.png" alt="Photoshop"></a>
+                    <a href="#" target="_blank"><img class="img2"  src="icons/illustrator_icon.png" alt="illustrator"></a>
+                    <a href="#" target="_blank"><img class="img2" src="icons/Procreate-icon.png" alt="Photoshop"></a>
+                </div>
+                  <button class="btn1" onclick="toggle('popup5','blur5')">Close</button>
+                </div>
 
+            
 </section>
+
+
+
 <footer>
     <div id="footer-placeholder" data-source="footer.html"></div>
 </footer>
+<script type="text/javascript">
+    function toggle(popupId , blurId) {
+        var blur = document.getElementById(blurId);
+        var popup = document.getElementById(popupId);
+        blur.classList.toggle('active');
+        popup.classList.toggle('active');
+    }
+</script>
+
 
 <script src="activeMarkerPage.js"></script>
 <script src="inputHeader.js"></script>
 <script src="app.js"></script>
-<script src="scrollDownCenter.js"></script>
 <script src="footer.js"></script>
 </body>
 

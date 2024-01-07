@@ -111,6 +111,19 @@ header {
     
 }
 
+.hero img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#about,
+#experience,
+#projects {
+    padding: 50px;
+}
+
 /* Estilos adicionales para la cuadrícula de proyectos */
 
 .grid-container {
@@ -237,7 +250,49 @@ a {
     left: 0;
     z-index: -1; /* Coloca las partículas detrás del contenido principal */
 }
+/* card  de acerca de mi */
+.card {
+    display: flex;
+    max-width: 1000px; /* Ajusta el ancho máximo de la tarjeta según sea necesario */
+    margin: 200px;
+    align-items: center; /* Alinea el contenido al centro horizontalmente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #F2B441;
+    border-radius: 40px;
+}
 
+.card-image {
+      width: 50%;
+            padding: 20px;
+            text-align: center; /* Ajusta la alineación de la imagen según sea necesario */
+        }
+
+.card-image img {
+    width: 100%;
+    height: 100%; /* Ajusta para que la imagen no se estire */
+    
+    border-radius: 40px;
+}
+
+.card-content {
+    width: 70%;
+    padding: 40px;
+    font-family: Metrophobic;
+    text-align: left; /* Ajusta la alineación del texto según sea necesario */
+}
+
+.card h1 {
+    font-family: Nunito;
+    font-size: 30px;
+    color: #252859;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #252859;
+    line-height: 1.6;
+}
 #figuraRara_1 {
 height: 100px;
 
@@ -370,6 +425,17 @@ border-bottom-right-radius: 100px;
     bottom: 100px;
  }
 
+ .mask{
+    margin-top: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    user-select: none;
+    mix-blend-mode: screen;
+ }
 .projectTri{
     margin-left: 400px;
     position: relative;

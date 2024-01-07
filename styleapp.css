@@ -5,22 +5,34 @@ body{
     font-family: 'nunito', sans-serif;
     background-color: #252859;
     overflow-x: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: thin;
-    scrollbar-color: #252859 #252859;
-}
+      /* Estilos para la barra de desplazamiento en Edge */
+      -ms-overflow-style: none;
+      scrollbar-width: thin;
+      scrollbar-color: #252859 #252859;
+  }
+  body::-webkit-scrollbar {
+      width: 10px; /* Ancho de la barra de desplazamiento en WebKit */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+      background-color:#252859; /* Color del "pulgar" de la barra de desplazamiento en WebKit */
+      border-radius: 2px; /* Radio de borde para el "pulgar" de la barra de desplazamiento en WebKit */
+  }
+  
+  body::-webkit-scrollbar-track {
+      background-color: #252859; /* Color del fondo de la barra de desplazamiento en WebKit */
+  }
 
 .container
 {
     position:relative;
     width:100%;
-   min-height:100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-background: #F2B441;/* fondo*/
-transition: 0.5s;
-padding: 20px;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    padding: 20px;
 }
 
 /* parte de navegador de diapositivas */
@@ -43,7 +55,7 @@ padding: 20px;
     height: 100%;
     display: flex;
     width: max-content;
-    transition: 1s;
+    transition: 1.7s ease-in-out;
  }
  #imagenApp{
     width: 1468px;
@@ -114,7 +126,7 @@ padding: 20px;
     padding-top: 10px;
     margin: 100px auto;
     color: #fff;
-    max-width: 980px;/* esta tamaño no se ajusta a los diferentes textos largo */
+    max-width:600px;/* esta tamaño no se ajusta a los diferentes textos largo */
     text-align: center;
     font-family: Raleway;
     font-size: 5.0em;
