@@ -38,5 +38,26 @@ dots.forEach((li,key) => {
     li.addEventListener('click', function(){
         active = key;
         reloadSlider();
-    })
-}) 
+    });
+});
+// Agregamos eventos para cambiar el display de la overlay
+items.forEach((item) => {
+    item.addEventListener('mouseover', function () {
+        overlay.style.display = 'flex';
+    });
+
+    item.addEventListener('mouseout', function () {
+        overlay.style.display = 'none';
+    });
+});
+
+//eventos para pausar y reanudar el slider cuando el ratón está sobre la imagen
+list.addEventListener('mouseover', function () {
+    clearInterval(refreshSlider);
+});
+
+list.addEventListener('mouseout', function () {
+    refreshSlider = setInterval(() => {
+        next.click();
+    }, 5000);
+});

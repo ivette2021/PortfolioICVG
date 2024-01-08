@@ -23,17 +23,7 @@ body{
       background-color: #252859; /* Color del fondo de la barra de desplazamiento en WebKit */
   }
 
-.container
-{
-    position:relative;
-    width:100%;
-    min-height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    padding: 20px;
-}
+
 
 /* parte de navegador de diapositivas */
 .slider{
@@ -48,6 +38,54 @@ body{
     border-radius: 30px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
  }
+ /* Agrega estilos de superposición */
+ .item {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  }
+
+  .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .parrafo{
+    text-align: justify;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Puedes ajustar la opacidad y color según tus preferencias */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+
+  .item:hover .overlay {
+    display: flex;
+    pointer-events: none;
+    user-select:none;
+  }
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    z-index: 1000;
+  }
  .list{
     position: absolute;
     top: 0;
@@ -55,8 +93,30 @@ body{
     height: 100%;
     display: flex;
     width: max-content;
-    transition: 1.7s ease-in-out;
+    transition: 3s ease-in-out;
  }
+ h3 {
+    margin-top: -20%;
+ }
+ .button {
+    display: inline-block;
+    position: fixed;
+    padding: 10px 20px;
+    margin-bottom: 100px;
+    text-decoration: none;
+    background-color:#ff7474;  
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #bb434d;
+  }
  #imagenApp{
     width: 1468px;
     max-width: 100vw;
@@ -73,6 +133,7 @@ body{
  }
  .buttons button{
     width: 50px;
+    margin: 30px;
     height: 50px;
     border-radius: 50%;
     background-color: #F25764;

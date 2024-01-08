@@ -19,15 +19,37 @@
     <div class="slider">
       <div class="list">
         <div class="item">
+          <div class="overlay">
+            <h3>Plant App</h3>
+        
+          </div>
+          <button class="button" onclick="showPopup('popup1')">Read More</button>
           <img id="imagenApp" src="images/presentacion_app.png" />
         </div>
+
+
         <div class="item">
+          <div class="overlay">
+            <h3>appEcommerce</h3>
+          </div>
+          <button class="button" onclick="showPopup('popup2')">Read More</button>
           <img id="imagenApp" src="images/appEcommerce.png" />
         </div>
+
+
         <div class="item">
+          <div class="overlay">
+            <h3>PostX</h3>
+          </div>
+          <button class="button" onclick="showPopup('popup3')">Read More</button>
           <img id="imagenApp" src="images/PostX.jpg" />
         </div>
+        
         <div class="item">
+          <div class="overlay">
+            <h3>IG</h3>
+          </div>
+          <button class="button" onclick="showPopup('popup4')">Read More</button>
           <img id="imagenApp" src="images/Presentacion_de_la_app_sin_anotaciones.jpg"/>
         </div>
       </div>
@@ -44,10 +66,69 @@
         <li></li>
       </ul>
     </div>
+    <div id="popup1" class="popup">
+      <h3>PlantApp</h3>
+      <p> It focuses on providing users with an educational and engaging experience in the world of plants. Features:
+        - MVVM-LiveData-ROOM architecture for an organized and scalable structure.
+        REST services consumption with 2 endpoints to get information about plants and their details.
+         and its details.
+        Offline operation with local storage using ROOM architecture.
+        Retrofit integration to perform HTTP requests.
+        Visualization of images through libraries such as Glide.
+        </p>
+      <button class="button" onclick="hidePopup('popup1')">Cerrar</button>
+    </div>
 
+    <div id="popup2" class="popup">
+      <h3>Ecommerce</h3>
+      <p>
+        Creating a Marketplace application from scratch involves leveraging diverse 
+        technologies such as Firebase integration, map SDK with GPS, real-time chat,
+         and push notifications. Additionally, Google Cloud is utilized, and features
+          include ad creation,account verification, camera/gallery access, password 
+          changes, category establishment, and interface enhancements through animations.
+           The implementation covers phone calls, text messaging, user permission management,
+            fragments, activities, and an image library.
+        </p>
+      <button class="button" onclick="hidePopup('popup2')">Cerrar</button>
+    </div>
+
+    <div id="popup3" class="popup">
+      <h3>XPost</h3>
+      <p>
+        
+        Twitter-style comment or post (now it's X) made in JetPack Compose
+        </p>
+      <button class="button" onclick="hidePopup('popup3')">Cerrar</button>
+    </div>
+
+    <div id="popup4" class="popup">
+      <h3> Login IG</h3>
+      <p>
+        Practice on Instagram login. This involved working on the interface,
+         business logic, validation of email and password formats, functionality
+          to hide and show the password, as well as the loading screen. This whole
+           process was done using Jetpack Compose with Kotlin, and dependency 
+           injection was implemented with Dagger Hilt. In addition, the code was
+            restructured to follow the Clean Architecture pattern and the Singleton
+             design pattern was used in the development.
+        </p>
+      <button class="button" onclick="hidePopup('popup4')">Cerrar</button>
+    </div>
     <footer>
       <div id="footer-placeholder" data-source="footer.html"></div>
     </footer>
+    <script>
+      function showPopup(popupId) {
+        document.getElementById(popupId).style.display = 'block';
+        // Detener el carrusel aquí (implementar la lógica según tu código actual)
+      }
+
+      function hidePopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+        // Continuar el carrusel aquí (implementar la lógica según tu código actual)
+      }
+    </script>
     <script src="sliderApp.js"></script>
     <script src="activeMarkerPage.js"></script>
     <script src="inputHeader.js"></script>
