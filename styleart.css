@@ -128,7 +128,6 @@ body::-webkit-scrollbar-track {
     box-shadow:0 5px 10px rgba(0,0,0,.5);
     color: #000000 ;
     border-radius: 20px; /* radio de borde redondeado */
-
 }
 .btn1:hover {
     background-color: #d45f5f;

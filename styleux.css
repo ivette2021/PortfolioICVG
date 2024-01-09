@@ -143,6 +143,7 @@ h2:after{
     opacity: 0;
     transition: 0.5s;
     border-radius: 20px;
+    z-index: 1000;
 }
 #popup1.active,
 #popup2.active,
@@ -222,7 +223,6 @@ h2:after{
     font-family: Raleway;
     font-size: 5.0em;
     position: relative;
-    
 }
 .titulos:before{
     background-color: #fff;
@@ -246,4 +246,12 @@ h2:after{
     right: 0;
     top: 50%;
     z-index: -1;
+}
+#particles-js { /*hace que se integre mejor wl fondo particulas*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca las partículas detrás del contenido principal */
 }

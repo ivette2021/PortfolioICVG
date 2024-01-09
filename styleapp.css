@@ -75,17 +75,81 @@ body{
     pointer-events: none;
     user-select:none;
   }
-  .popup {
-    display: none;
+  .overlay-content {
+   text-align: center;
+   color: #fff;
+}
+
+  #popup1 .button,
+#popup2 .button,
+#popup3 .button,
+#popup4 .button,
+#popup5 .button,
+#popup6 .button {
+    position:relative;
+    margin: 20px auto; /* Centra el botón horizontalmente */
+    padding: 15px 30px; /* Ajusta el padding para hacer el botón más grande */
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'nunito', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    background: #ff7474;  /* color del botón read more */
+    box-shadow:0 5px 10px rgba(0,0,0,.5);
+    color: #000000 ;
+    border-radius: 20px; /* radio de borde redondeado */
+}
+
+#popup1,
+#popup2,
+#popup3,
+#popup4,
+#popup5,
+#popup6  
+{
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.5);
+    background:#63BFAE;
+    visibility: hidden;
     text-align: center;
-    background: #fff;
-    z-index: 1000;
-  }
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    z-index: 100;
+}
+#popup1.active,
+#popup2.active,
+#popup3.active,
+#popup4.active,
+#popup5.active,
+#popup6.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.parrafo{
+    text-align: justify;
+}
+
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
  .list{
     position: absolute;
     top: 0;
@@ -99,23 +163,26 @@ body{
     margin-top: -20%;
  }
  .button {
-    display: inline-block;
-    position: fixed;
-    padding: 10px 20px;
-    margin-bottom: 100px;
+   display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px 30px; /* Ajusta el padding para hacer el botón más grande */
     text-decoration: none;
+    color: #000000;
     background-color:#ff7474;  
-    color: #fff;
-    font-size: 16px;
     border: none;
+    font-weight: bold;
+    font-size: 16px;
     border-radius: 20px;
     cursor: pointer;
-    text-align: center;
     transition: background-color 0.3s ease;
   }
   
   .button:hover {
     background-color: #bb434d;
+    color: #fff;
+    transform: scale(1.1);
+    transition: ease-in-out;
   }
  #imagenApp{
     width: 1468px;

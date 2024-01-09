@@ -15,15 +15,18 @@
     <header>
       <div id="navigation-placeholder" data-source="header.html"></div>
     </header>
+
+  
     <h1 class = titulos>Android</h1>
     <div class="slider">
       <div class="list">
         <div class="item">
           <div class="overlay">
+            <div class="overlay-content">
             <h3>Plant App</h3>
-        
+            <button class="button" onclick="showPopup('popup1')">Read More</button>
           </div>
-          <button class="button" onclick="showPopup('popup1')">Read More</button>
+          </div>
           <img id="imagenApp" src="images/presentacion_app.png" />
         </div>
 
@@ -62,13 +65,12 @@
       <ul class="dots">
         <li class="active"></li>
         <li></li>
-        <li></li>
+        <li></li> 
         <li></li>
       </ul>
     </div>
     <div id="popup1" class="popup">
       <h3>PlantApp</h3>
-      <p> It focuses on providing users with an educational and engaging experience in the world of plants. Features:
         - MVVM-LiveData-ROOM architecture for an organized and scalable structure.
         REST services consumption with 2 endpoints to get information about plants and their details.
          and its details.
@@ -76,12 +78,15 @@
         Retrofit integration to perform HTTP requests.
         Visualization of images through libraries such as Glide.
         </p>
+        <div class="social-icons">
+          <a href="#" target="_blank"><img class="img2Coso"  src="icons/kotlin-icon.png" alt="CSP"></a>
+      </div>
       <button class="button" onclick="hidePopup('popup1')">Cerrar</button>
     </div>
 
     <div id="popup2" class="popup">
       <h3>Ecommerce</h3>
-      <p>
+      <p class="parrafo">
         Creating a Marketplace application from scratch involves leveraging diverse 
         technologies such as Firebase integration, map SDK with GPS, real-time chat,
          and push notifications. Additionally, Google Cloud is utilized, and features
@@ -90,21 +95,27 @@
            The implementation covers phone calls, text messaging, user permission management,
             fragments, activities, and an image library.
         </p>
+        <div class="social-icons">
+          <a href="#" target="_blank"><img class="img2Coso"  src="icons/kotlin-icon.png" alt="CSP"></a>
+      </div>
       <button class="button" onclick="hidePopup('popup2')">Cerrar</button>
     </div>
 
     <div id="popup3" class="popup">
       <h3>XPost</h3>
-      <p>
+      <p class="parrafo">
         
         Twitter-style comment or post (now it's X) made in JetPack Compose
         </p>
+        <div class="social-icons">
+          <a href="#" target="_blank"><img class="img2Coso"  src="icons/kotlin-icon.png" alt="CSP"></a>
+      </div>
       <button class="button" onclick="hidePopup('popup3')">Cerrar</button>
     </div>
 
     <div id="popup4" class="popup">
       <h3> Login IG</h3>
-      <p>
+      <p class="parrafo">
         Practice on Instagram login. This involved working on the interface,
          business logic, validation of email and password formats, functionality
           to hide and show the password, as well as the loading screen. This whole
@@ -113,6 +124,9 @@
             restructured to follow the Clean Architecture pattern and the Singleton
              design pattern was used in the development.
         </p>
+        <div class="social-icons">
+          <a href="#" target="_blank"><img class="img2Coso"  src="icons/kotlin-icon.png" alt="CSP"></a>
+      </div>
       <button class="button" onclick="hidePopup('popup4')">Cerrar</button>
     </div>
     <footer>
@@ -130,7 +144,6 @@
       }
     </script>
     <script src="sliderApp.js"></script>
-    <script src="activeMarkerPage.js"></script>
     <script src="inputHeader.js"></script>
     <script src="app.js"></script>
     <script src="footer.js"></script>
