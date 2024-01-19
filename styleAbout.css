@@ -1,7 +1,6 @@
 body {
     margin-top: 150px;
     padding: 0;
-    font-family: 'nunito', sans-serif;
     background-color: #252859;
     align-items: center;
     box-sizing: border-box;
@@ -61,7 +60,6 @@ body::-webkit-scrollbar-track {
 .card-content {
     width: 70%;
     padding: 40px;
-    font-family: Metrophobic;
     text-align: left; /* Ajusta la alineación del texto según sea necesario */
 }
 
@@ -75,5 +73,6 @@ body::-webkit-scrollbar-track {
 .card p {
     font-size: 16px;
     color: #252859;
+    font-family: Metrophobic;
     line-height: 1.6;
 }
