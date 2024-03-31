@@ -1,0 +1,162 @@
+/* aplica box sizing a todos los elementos */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1REM = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #252859;
+      scrollbar-width: thin;
+      scrollbar-color: #252859 #252859;
+      font-size: 1.6rem;
+      line-height: 2;
+  }
+/* Globales */
+h1, 
+h2, 
+h3 {
+    font-family: 'Comfortaa', serif;
+    margin: 0 0 2rem 0;
+    color: var(--ambar-color);
+}
+h1 {
+    font-size: 3.8rem;
+}
+@media (min-width: 768px) { 
+    h1 {
+        font-size: 5rem;
+    }
+}
+h2 {
+    font-size: 3.2rem;
+}
+@media (min-width: 768px) { 
+    h2 {
+        font-size: 4rem;
+    }
+}
+h3 {
+    font-size: 2.4rem;
+}
+@media (min-width: 768px) { 
+    h3 {
+        font-size: 3rem;
+    }
+}
+a {
+    text-decoration: none;
+    color: var(--albaricoque-color);
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.btn {
+    background-color: #8cbc00;
+    display: block;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out ;
+    text-align: center;
+    border: none;
+    width: 100%;
+}
+.btn:hover {
+    background-color: #769c02;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) { 
+    .btn {
+        width: auto;
+    }
+}
+
+
+/** Utilidades */
+.text-center {
+    text-align: center;
+}
+
+@media (min-width: 768px) { 
+    .max-width-30 {
+        max-width: 30rem;
+    }
+}
+/** Header y Navegacion **/
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center;
+    color: var(--ambar-color);
+}
+.nombre-sitio span {
+    color: var(--fresa-color);
+}
+.contenedor-navegacion {
+    border-top: .1rem solid #e1e1e1;
+}
+.nav-principal {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .nav-principal {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+.hero{
+    background-image: url(../images/ihivikobanner.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* esto es para que la imagen se estire */
+    background-position: center center;
+    height: 25rem;
+}
+
+@media (min-width: 768px) { 
+    .hero {
+        height: 55rem;
+    }
+}
+
+p {
+    color: var(--ambar-color) ;
+}
+#particles-js { /*hace que se integre mejor wl fondo particulas*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca las partículas detrás del contenido principal */
+}
+
+/* Aquí definimos el CSS Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr); /* Columnas de tamaño mínimo de 100px */
+    gap: 10px; /* Espacio entre las imágenes */
+    justify-items: center; /* Centra las imágenes horizontalmente en cada celda */
+}
+
+/* Ajustamos el tamaño de las imágenes */
+.skills-grid img {
+    max-width: 60%; /* Para que las imágenes no se salgan del contenedor */
+    height: auto; /* Para mantener la proporción de la imagen */
+}
