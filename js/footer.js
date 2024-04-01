@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
     // Obtener el contenedor del footer en la página
     const footerContainer = document.getElementById("footer-placeholder");
 
@@ -17,19 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
           var linkElement = document.createElement('link');
           linkElement.rel = 'stylesheet';
 
-          var path = window.location.pathname;
-          var page = path.split("/").pop();
+         
           
           if (page.includes("index")){
               linkElement.href = './css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS    
               document.head.appendChild(linkElement);
-              xhr.open("GET", "./html/footer.html", true);
           }
   
           else{
               linkElement.href = '../css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS
               document.head.appendChild(linkElement);
-              xhr.open("GET", "../html/footer.html", true);
           }
           // Obtenemos la URL del script actual
           
@@ -37,5 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
           // Añadir el enlace al head del documento
           
     };
+    if (page.includes("index")){
+    xhr.open("GET", "./html/footer.html", true);
+    }
+    else{
+        xhr.open("GET", "../html/footer.html", true);
+    }
     xhr.send();
 });
