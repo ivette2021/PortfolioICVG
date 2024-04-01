@@ -9,7 +9,21 @@ xhr.onreadystatechange = function () {
         // Crear un elemento link para el archivo CSS
         var linkElement = document.createElement('link');
         linkElement.rel = 'stylesheet';
-        linkElement.href = '../css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS
+
+        // Obtenemos el elemento <script> actual
+        var path = window.location.pathname;
+        var page = path.split("/").pop();
+        console.log( page );
+        if (page.includes("index")){
+            linkElement.href = './css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS    
+        }
+
+        else{
+            linkElement.href = '../css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS
+        }
+        // Obtenemos la URL del script actual
+        
+      
 
         // Añadir el enlace al head del documento
         document.head.appendChild(linkElement);
