@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // Crear un elemento link para el archivo CSS
           var linkElement = document.createElement('link');
           linkElement.rel = 'stylesheet';
-          linkElement.href = '../css/footer.css'; // Reemplaza con la ruta correcta de tu archivo CSS
+          linkElement.href = './css/footer.css'; // Reemplaza con la ruta correcta de tu archivo CSS
             document.head.appendChild(linkElement);
           // Obtenemos la URL del script actual
           
@@ -28,6 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 
-    xhr.open("GET", "../docs/footer.html", true);
+    xhr.open("GET", "./footer.html", true);
     xhr.send();
 });
