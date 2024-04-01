@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
           // Añadir el enlace al head del documento
           document.head.appendChild(linkElement);
     };
-    xhr.open("GET", "./html/footer.html", true);
+    xhr.open("GET", "../html/footer.html", true);
     xhr.send();
 });
