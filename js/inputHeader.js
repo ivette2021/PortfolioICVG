@@ -13,7 +13,7 @@ xhr.onreadystatechange = function () {
         // Obtenemos el elemento <script> actual
         var path = window.location.pathname;
         var page = path.split("/").pop();
-        console.log( page );
+        
         if (page.includes("index")){
             linkElement.href = './css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS    
         }

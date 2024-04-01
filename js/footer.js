@@ -9,14 +9,33 @@ document.addEventListener("DOMContentLoaded", function () {
             // Insertar el contenido del footer.html en el contenedor
             footerContainer.innerHTML = this.responseText;
         }
+
+
+
+
           // Crear un elemento link para el archivo CSS
           var linkElement = document.createElement('link');
           linkElement.rel = 'stylesheet';
-          linkElement.href = '../css/footer.css'; // Reemplaza con la ruta correcta de tu archivo CSS
+
+          var path = window.location.pathname;
+          var page = path.split("/").pop();
+          
+          if (page.includes("index")){
+              linkElement.href = './css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS    
+              document.head.appendChild(linkElement);
+              xhr.open("GET", "./html/footer.html", true);
+          }
+  
+          else{
+              linkElement.href = '../css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS
+              document.head.appendChild(linkElement);
+              xhr.open("GET", "../html/footer.html", true);
+          }
+          // Obtenemos la URL del script actual
+          
   
           // Añadir el enlace al head del documento
-          document.head.appendChild(linkElement);
+          
     };
-    xhr.open("GET", "../html/footer.html", true);
     xhr.send();
 });
