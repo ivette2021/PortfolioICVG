@@ -28,6 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 
-    xhr.open("GET", "../html/footer.html", true);
+    xhr.open("GET", "../docs/footer.html", true);
     xhr.send();
 });
