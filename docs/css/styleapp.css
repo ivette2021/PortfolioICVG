@@ -24,7 +24,11 @@ body{
   }
 
 
-
+/* Estilos para las imágenes */
+.slider .list .item img {
+    width: 100%;
+    height: auto;
+  }
 /* parte de navegador de diapositivas */
 .slider{
     width: 1468px;
