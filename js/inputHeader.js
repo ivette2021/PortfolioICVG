@@ -9,7 +9,7 @@ xhr.onreadystatechange = function () {
         // Crear un elemento link para el archivo CSS
         var linkElement = document.createElement('link');
         linkElement.rel = 'stylesheet';
-        linkElement.href = './css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS
+        linkElement.href = '../css/header.css'; // Reemplaza con la ruta correcta de tu archivo CSS
 
         // Añadir el enlace al head del documento
         document.head.appendChild(linkElement);
