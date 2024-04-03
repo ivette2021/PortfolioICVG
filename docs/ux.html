@@ -5,67 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UX Design</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styleart.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
 </head>
 <body>
-
     <div id="particles-js"></div>
-
-
     <header class="headerPosition">
         <div id="navigation-placeholder" data-source="./header.html"></div>
     </header>
 
-    <h1 class = titulos>HIMATCH</h1>
+    <h1 class="titulos">USER<br>EXPERIENCE</h1>
 
-    <section class="imageGrid" class="grid-container">
-        <!-- Imágenes para la grilla -->
-        <div class="project">
-            <img src="./images/prototipodeHF.jpg" alt="Imagen 1">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>prototipo y diseños de alta fidelidad en Figma</h3>
-                    <a href="https://www.figma.com/proto/XMRb8kMXceQFr6qpw40Zvb/HIMATCH-(High-fi)?type=design&node-id=527-5766&t=69poGDlYtGiGgfnP-1&scaling=min-zoom&page-id=1%3A378&starting-point-node-id=527%3A5766&show-proto-sidebar=1">View details</a>
+    <section class="imageGrid">
+        <div class="container" id="blur">
+            <div class="project">
+                <img src="./images/prototipodeHF.jpg" alt="Himatch">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Himatch</h3>
+                        <button class="btn1" onclick="toggle('popup1','blur')">View details</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="project">
-            <img src="./images/FIGAM_HIMATCH.png" alt="Imagen 1">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>Prototipo de baja fidelidad</h3>
-                    <a href="https://www.figma.com/proto/4PeqrlWo186QojOK3l38pz/HIMATCH?type=design&node-id=527-5766&t=01CmlOpFV7ulEt0Z-1&scaling=min-zoom&page-id=1%3A378&starting-point-node-id=527%3A5766">View details</a>
+        <div id="popup1">
+            <h3>High-fidelity prototype of HIMATCH</h3>
+            <h4>User Experience (UX) design for a match-style gaming application, created in Figma.</h4>
+            <div class="social-icons">
+                <a href="https://www.figma.com/proto/XMRb8kMXceQFr6qpw40Zvb/HIMATCH-(High-fi)?type=design&node-id=527-5766&t=69poGDlYtGiGgfnP-1&scaling=min-zoom&page-id=1%3A378&starting-point-node-id=527%3A5766&show-proto-sidebar=1" target="_blank"><img src="./icons/figma_icon.png" alt="Figma"></a>
+            </div>
+            <button class="btn1" onclick="toggle('popup1','blur')">Close</button>
+        </div>
+
+        <div class="container" id="blur2">
+            <div class="project">
+                <img src="./images/FIGAM_HIMATCH.png" alt="Low-fidelity">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>General<br>script</h3>
+                        <button class="btn1" onclick="toggle('popup2','blur2')">View details</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="project">
-            <img src="./images/plano_general[1].jpg" alt="Imagen 2">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>General script</h3>
-                    <a href="#">View details</a>
+        <div id="popup2">
+            <h3>Low-fidelity prototype of HIMATCH</h3>
+            <h4>User Experience (UX) design for a match-style gaming application, created in Figma.</h4>
+            <div class="social-icons">
+                <a href="https://www.figma.com/proto/4PeqrlWo186QojOK3l38pz/HIMATCH?type=design&node-id=527-5766&t=01CmlOpFV7ulEt0Z-1&scaling=min-zoom&page-id=1%3A378&starting-point-node-id=527%3A5766" target="_blank"><img src="./icons/figma_icon.png" alt="Figma"></a>
+            </div>
+            <button class="btn1" onclick="toggle('popup2','blur2')">Close</button>
+        </div>
+
+        <div class="container" id="blur3">
+            <div class="project">
+                <img src="./images/plano_general[1].jpg" alt="General script">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>General<br>script</h3>
+                        <button class="btn1" onclick="toggle('popup3','blur3')">View details</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="project" id = "separadorImagen">
-            <img src="./images/guion_grafico_primer_plano[1].jpg" alt="Imagen 3">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>Close-up script</h3>
-                    <a href="#">View details</a>
+        <div id="popup3">
+            <h3>Storyboard - Overview: Addressing User Weak Points</h3>
+            <h4>Storyboard focused on user needs, their context, and weaknesses.</h4>
+            <p class="parrafo">Panel 1 (User Weak Point):
+                Image of a frustrated user while playing HIMATCH.<br>
+                Text: "Frustration due to challenging levels."<br><br>
+                Panel 2 (Problem Identification):<br>
+                Zoom in on the screen with a difficult level and highlighted obstacles.<br>
+                Text: "Identifying the problem."<br><br>
+                Panel 3 (Solution - In-Game Assistance):<br>
+                Display of an interactive in-game tutorial guiding the user on overcoming obstacles.<br>
+                Text: "Providing in-game assistance."<br><br>
+                Panel 4 (User Weak Point):<br>
+                User overwhelmed by customization options.<br>
+                Text: "Confusion in customization."<br><br>
+                Panel 5 (Problem Identification):<br>
+                Highlight of customization options with a question mark.<br>
+                Text: "Identifying the confusion."<br><br>
+                Panel 6 (Solution - Simplifying Customization):
+                Redesigned user interface to simplify customization.<br>
+                Text: "Easier customization."<br></p>
+            <button class="btn1" onclick="toggle('popup3','blur3')">Close</button>
+        </div>
+        <div class="container" id="blur4">
+            <div class="project">
+                <img src="./images/guion_grafico_primer_plano[1].jpg" alt="Close-up shot script">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Close-up<br>shot script</h3>
+                        <button class="btn1" onclick="toggle('popup4','blur4')">View details</button>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div id="popup4">
+            <h3>Storyboard - Close-Up: Detailing the Designed Solution</h3>
+            <h4>Storyboard focused on the product and how it functions.</h4>
+            <p class="parrafo">Panel 1 (User Focus):
+                Close-up of a smiling user while playing and better understanding the levels.<br>
+                Text: "Improving the user experience."<br><br>
+                Panel 2 (Solution in Action):<br>
+                Screen showing the user using the new in-game assistance features.<br>
+                Text: "Overcoming obstacles with confidence."<br><br>
+                Panel 3 (Focus on Customization):<br>
+                Happy user easily customizing their character.<br>
+                Text: "Enjoying simplified customization."<br><br>
+                Panel 4 (Solution in Action):<br>
+                Screenshot of the redesigned user interface for customization.<br>
+                Text: "Customization without confusion."<br><br>
+                Panel 5 (Positive Impact):<br>
+                User sharing their positive experience on social media.<br><br>
+                Social media icons with enthusiastic comments.<br>
+                Text: "Sharing joy."<br><br>
+                Panel 6 (Successful Outcome):<br>
+                Satisfied and engaged user with HIMATCH.<br>
+                Text: "An enhanced and satisfied gaming experience."</p>
+            <button class="btn1" onclick="toggle('popup4','blur4')">Close</button>
         </div>
     </section>
+
     <footer>
         <div id="footer-placeholder" data-source="./footer.html"></div>
     </footer>
-    
-    <script src="./inputHeader.js"></script>
-    <script src="./imageGrid.js"></script>
-    <script src="./app.js"></script>
-    <script src="./footer.js"></script>
+
+    <script type="text/javascript">
+        function toggle(popupId, blurId) {
+            var blur = document.getElementById(blurId);
+            var popup = document.getElementById(popupId);
+            blur.classList.toggle('active');
+            popup.classList.toggle('active');
+        }
+    </script>
+
+    <script src="./js/inputHeader.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/footer.js"></script>
 </body>
 </html>
