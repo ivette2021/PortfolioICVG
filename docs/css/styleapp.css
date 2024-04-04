@@ -295,3 +295,51 @@ body{
     top: 50%;
     z-index: -1;
 }
+
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 300px;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+    .slider .list .item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .buttons {
+        top: 35%;
+    }
+
+    .buttons button {
+        width: 40px;
+        margin: 20px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .dots {
+        bottom: 5px;
+    }
+
+    .dots li {
+        width: 8px;
+        height: 8px;
+        margin: 15px;
+    }
+
+    .dots li.active {
+        width: 20px;
+    }
+
+    .titulos {
+        margin: 50px auto;
+        font-size: 3.0em;
+    }
+
+    .titulos:before,
+    .titulos::after {
+        width: 80px;
+    }
+}

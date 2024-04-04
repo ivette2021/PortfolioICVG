@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var options = {
-        strings: ["Android Developer", "Automation and Robotics Engineer", "UX Designer"],
+        strings: ["📱Android Developer📱", "🦾Automation and Robotics Engineer🦾", "✨UX Designer✨"],
         typeSpeed: 50,  // Velocidad de escritura
         backSpeed: 30,  // Velocidad de retroceso
         backDelay: 1000,  // Retraso antes de retroceso

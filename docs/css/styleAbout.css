@@ -76,3 +76,37 @@ body::-webkit-scrollbar-track {
     font-family: 'Comfortaa', sans-serif;
     line-height: 1.6;
 }
+/* Media query para hacer responsivo el body */
+@media screen and (max-width: 768px) {
+    body {
+        margin-top: 100px; /* Reducimos el margen superior */
+    }
+}
+
+/* Media query para hacer responsiva la tarjeta */
+@media screen and (max-width: 768px) {
+    .card {
+        max-width: 90%; /* Reducimos el ancho máximo de la tarjeta para pantallas más pequeñas */
+        border-radius: 20px; /* Reducimos el radio de borde */
+    }
+
+    .card-image {
+        width: 80%; /* Reducimos el ancho de la imagen */
+        padding: 10px; /* Reducimos el relleno */
+    }
+
+    .card-content {
+        width: 90%; /* Reducimos el ancho del contenido */
+        padding: 20px; /* Reducimos el relleno */
+    }
+
+    .card h1 {
+        font-size: 24px; /* Reducimos el tamaño del título */
+        margin-bottom: 8px; /* Reducimos el margen inferior */
+    }
+
+    .card p {
+        font-size: 14px; /* Reducimos el tamaño del texto */
+        line-height: 1.5; /* Ajustamos la altura de línea */
+    }
+}

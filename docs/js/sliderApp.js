@@ -3,7 +3,7 @@ let items = document.querySelectorAll('.slider .list .item');
 let dots = document.querySelectorAll('.slider .dots li');
 let prev = document.getElementById('prev');
 let next = document.getElementById('next');
-
+const overlay = document.querySelector('.overlay');
 let active = 0;
 let lenghtItems = items.length -1;
 

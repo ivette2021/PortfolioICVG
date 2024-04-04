@@ -113,3 +113,17 @@ form button{
     left: 0;
     z-index: -1; /* Coloca las partículas detrás del contenido principal */
 }
+@media screen and (max-width: 768px) {
+    .input-box .input-field,
+    .textarea-field .input-field {
+        width: 100%; /* Ajusta el ancho de los campos de entrada y textarea en dispositivos pequeños */
+    }
+
+    .field.error .input-field {
+        border-color: #F25764;
+    }
+
+    form button {
+        width: 100%; /* Ajusta el ancho del botón en dispositivos pequeños */
+    }
+}
