@@ -1,55 +1,58 @@
+/* Estilos para el footer */
 footer {
     background-color: #63C5B8;
     color: #fff;
     text-align: center;
+    padding: 20px 0; /* Agregamos espacio interno al footer */
 }
+
 .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.logo-b img {
-    max-width: 60%;
+.footer-logo img {
+    max-width: 40%; /* Ajustamos el tamaño máximo del logo */
+    justify-content: center;
     height: auto;
 }
 
-.social-icons {
+.footer-social-icons {
     display: flex;
     justify-content: center;
-    
+    margin-top: 10px; /* Añadimos margen superior a los iconos */
 }
 
-.social-icons a {
-    display: flex;
+.footer-social-icons a {
+    display: inline-flex; /* Asegura que los enlaces ocupen solo el espacio que necesitan */
     align-items: center;
+    margin: 0 10px; /* Espacio entre los iconos */
 }
 
-.social-icons img {
+.footer-social-icons img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    
 }
 
-.copyright {
-   
+.footer-copyright {
     font-size: 14px; /* Ajusta el tamaño de fuente del texto de copyright */
+    margin-top: 10px; /* Añadimos margen superior al texto de copyright */
 }
 
 /* Media query para hacer el footer responsivo */
 @media screen and (max-width: 768px) {
-    .logo-b img {
-        max-width: 40%;
+    .footer-logo img {
+        max-width: 20%;
     }
 
-    .social-icons img {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
+    .footer-social-icons img {
+        width: 25px;
+        height: 25px;
     }
 
-    .copyright {
-        font-size: 12px;
+    .footer-copyright {
+        font-size: 10px;
     }
 }

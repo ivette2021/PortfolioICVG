@@ -18,10 +18,12 @@ function setActive(element) {
 // Verificar tamaño de pantalla y mostrar toggle en pantallas pequeñas
 function checkToggleVisibility() {
     const menuToggle = document.querySelector('.menu-toggle');
-    if (window.innerWidth <= 768) {
-        menuToggle.style.display = 'block';
-    } else {
-        menuToggle.style.display = 'none';
+    if (menuToggle) { // Verificar si menuToggle no es null
+        if (window.innerWidth <= 768) {
+            menuToggle.style.display = 'block';
+        } else {
+            menuToggle.style.display = 'none';
+        }
     }
 }
 
