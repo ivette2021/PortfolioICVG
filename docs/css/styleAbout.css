@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
 body {
     margin-top: 150px;
     padding: 0;

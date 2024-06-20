@@ -12,9 +12,12 @@ footer {
     align-items: center;
 }
 
+.footer-logo1 {
+    display: flex;
+    justify-content: center;
+}
 .footer-logo1 img {
     max-width: 40%; /* Ajustamos el tamaño máximo del logo */
-    justify-content: center;
     height: auto;
 }
 
@@ -39,6 +42,9 @@ footer {
 .footer-copyright {
     font-size: 14px; /* Ajusta el tamaño de fuente del texto de copyright */
     margin-top: 10px; /* Añadimos margen superior al texto de copyright */
+}
+.footer-label {
+    color: #fff; /* Color blanco para las letras */
 }
 
 /* Media query para hacer el footer responsivo */
