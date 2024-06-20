@@ -12,7 +12,7 @@ footer {
     align-items: center;
 }
 
-.footer-logo img {
+.footer-logo1 img {
     max-width: 40%; /* Ajustamos el tamaño máximo del logo */
     justify-content: center;
     height: auto;
@@ -43,7 +43,7 @@ footer {
 
 /* Media query para hacer el footer responsivo */
 @media screen and (max-width: 768px) {
-    .footer-logo img {
+    .footer-logo1 img {
         max-width: 20%;
     }
 
