@@ -6,95 +6,147 @@ body{
     background-color: #252859;
     overflow-x: hidden;
    /* Estilos para la barra de desplazamiento en Edge */
-   -ms-overflow-style: none;
-   scrollbar-width: thin;
-   scrollbar-color: #252859 #252859;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: #252859 #252859;
 }
 body::-webkit-scrollbar {
-   width: 10px; /* Ancho de la barra de desplazamiento en WebKit */
+    width: 10px; /* Ancho de la barra de desplazamiento en WebKit */
 }
 
 body::-webkit-scrollbar-thumb {
-   background-color:#252859; /* Color del "pulgar" de la barra de desplazamiento en WebKit */
-   border-radius: 2px; /* Radio de borde para el "pulgar" de la barra de desplazamiento en WebKit */
+    background-color:#252859; /* Color del "pulgar" de la barra de desplazamiento en WebKit */
+    border-radius: 2px; /* Radio de borde para el "pulgar" de la barra de desplazamiento en WebKit */
 }
 
 body::-webkit-scrollbar-track {
-   background-color: #252859; /* Color del fondo de la barra de desplazamiento en WebKit */
+    background-color: #252859; /* Color del fondo de la barra de desplazamiento en WebKit */
 }
-.container
+/* Grilla específica para RADARTASK */
+.radartaskGrid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna para centrar la imagen */
+    justify-items: center; /* Centra horizontalmente el contenido */
+    gap: 20px;
+    padding: 0px 200px;
+    margin: auto; /* Centra la grilla */
+}
+
+.radartaskGrid .project {
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.radartaskGrid .project img {
+    width: 100%; /* Se adapta al contenedor */
+    height: 500px;
+    object-fit: cover; /* Asegura que la imagen se vea bien */
+}
+
+.radartaskGrid .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radartaskGrid .project:hover .overlay {
+    opacity: 1;
+}
+
+.radartaskGrid .overlay-content {
+    text-align: center;
+    color: #fff;
+}
+
+.container .imageGrid
 {
-   position:relative;
-   width:100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   transition: 0.5s;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+   padding: 20px;
+   padding:0px 200px;/*el 80 indica el margen de arriba e abajo y el segundo valor va de der e izq */
+   margin: auto; /* Centra la grilla */
    
 }
-.container#blur.active,
+/* Centra la grilla de las fotos  app mobile*/
+.imageGrid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+   padding:0px 200px;/*el 80 indica el margen de arriba e abajo y el segundo valor va de der e izq */
+   margin: auto; /* Centra la grilla */
+}
+.overlay { /*hace que se oscuresca la imagen, tambien afecta las letras del centro*/
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   transition: opacity 0.3s;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.project:hover .overlay {
+   opacity: 1;
+}
+
+.overlay-content {
+   text-align: center;
+   color: #fff;
+}
+
+.imageGrid .project {
+   position: relative;
+   overflow: hidden;
+   border-radius: 40px; /* Añade bordes redondeados al contenedor, ajusta el valor según tus preferencias */
+   
+}
+.imageGrid .project img {
+   width: 100%;/*hacen ver gigante a los iconos*/
+   height: 500px;/*hacen ver gigante a los iconos*/
+   object-fit: cover; /* Ajusta la propiedad para unificar los tamaños manteniendo la proporción */
+   transition: transform 0.3s, filter 0.3s; /* Agrega la transición para el zoom y el oscurecimiento */
+   transform: scale(1.1);
+}
+.imageGrid .project .img2{
+   width: 50px;/*hacen ver gigante a los iconos*/
+   height: 50px;/*hacen ver gigante a los iconos*/
+   flex-wrap: wrap;
+} 
+.container#blur0.active,
+.container#blur1.active,
 .container#blur2.active,
-.container#blur3.active
+.container#blur3.active,
+.container#blur4.active,
+.container#blur5.active,
+.container#blur6.active
 {
     filter :blur(20px);
     pointer-events: none;
     user-select:none;
 }
-.container .content
-{
-    position: relative;
-    max-width: 800px;
-    text-align: center;
-}
-h2{
 
-    margin-bottom: 10px;
-    color: #fff;/* boton read more */
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 5.0em;
-    text-transform: uppercase;
-}
-.titulo1 {
-    padding-top: 50px; /* Ajusta el valor según tus necesidades */
-}
-
-h2:before{
-    background-color: #fff;
-    display: block;
-    width: 120px;
-    height: 2px;
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    z-index: -1;
-}
-
-h2:after{
-    background-color: #fff;
-    display: block;
-    width: 120px;
-    height: 2px;
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    z-index: -1;
-}
-.container .content img
-{
-    max-width: 100%;
-    display: block;
-}
 .btn1 {
     display: inline-block;
     margin-top: 30px;
     margin-bottom: 20px;
     padding: 20px 30px; /* Ajusta el padding para hacer el botón más grande */
     text-decoration: none;
-    color: #fff;
-    background-color: #63C5B8;  
+    color: #000000;
+    background-color:#ff7474;  
     border: none;
     font-weight: bold;
     font-size: 16px;
@@ -102,33 +154,40 @@ h2:after{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-
+#popup0 .btn1,
 #popup1 .btn1,
 #popup2 .btn1,
 #popup3 .btn1,
 #popup4 .btn1,
-#popup5 .btn1 {
+#popup5 .btn1,
+#popup6 .btn1 {
     position:relative;
     margin: 20px auto; /* Centra el botón horizontalmente */
     padding: 15px 30px; /* Ajusta el padding para hacer el botón más grande */
     display: inline-block;
     font-weight: bold;
-    font-family: 'Metrophonic', sans-serif;
+    font-family: 'nunito', sans-serif;
     font-size: 16px;
     text-decoration: none;
     background: #ff7474;  /* color del botón read more */
     box-shadow:0 5px 10px rgba(0,0,0,.5);
-    color: #ffffff ;
+    color: #000000 ;
     border-radius: 20px; /* radio de borde redondeado */
-    z-index: 1;
 }
 .btn1:hover {
-    background-color: #53a499;
+    background-color: #d45f5f;
+    color: #fff;
+    transform: scale(1.1);
+    transition: ease-in-out;
+  
 }
+#popup0,
 #popup1,
 #popup2,
-#popup3
+#popup3,
+#popup4,
+#popup5,
+#popup6  
 {
     position: fixed;
     top: 40%;
@@ -143,11 +202,15 @@ h2:after{
     opacity: 0;
     transition: 0.5s;
     border-radius: 20px;
-    z-index: 1000;
+    z-index: 100;
 }
+#popup0.active,
 #popup1.active,
 #popup2.active,
-#popup3.active{
+#popup3.active,
+#popup4.active,
+#popup5.active,
+#popup6.active{
     top: 50%;
     visibility: visible;
     opacity: 1;
@@ -157,9 +220,6 @@ h2:after{
     text-align: justify;
 }
 
-.social-icons a:hover img {
-    animation: rotateAnimation 0.5s ease-in-out infinite; /*un bucle infinito */
-}
 
 @keyframes rotateAnimation {
     0% {
@@ -173,48 +233,6 @@ h2:after{
     }
 }
 
-.imgUx{
-    width: 100% !important; 
-    height: auto !important;
-    border-radius: 20px;
-    box-shadow:0 5px 30px rgba(0,0,0,.5);
-}
-.linea-con-punto {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 2px;
-    margin-top: 10px;
-    background-color: #ffffff00; /* Color del espacio */
-  }
-  
-  .linea-con-punto::before,
-  .linea-con-punto::after {
-    margin-top: 40px;
-    content: "";
-    flex: 1;
-    height: 3px;
-    background-color:  #63C5B8; /* Color de la línea */
-    border-radius: 10px;
-  }
-  
-  .linea-con-punto::before {
-    margin-right: 15px; /* Espacio a la derecha del punto */
-  }
-  
-  .linea-con-punto::after {
-    margin-left: 15px; /* Espacio a la izquierda del punto */
-  }
-  
-  .punto {
-    position: relative;
-    width: 10px; /* Tamaño del punto */
-    height: 10px;
-    margin-top: 30px;
-    background-color:  #63C5B8; /* Color del punto */
-    border-radius: 50%;
-}
 .titulos{
     margin: 100px auto;
     color: #fff;
@@ -223,6 +241,7 @@ h2:after{
     font-family: Raleway;
     font-size: 5.0em;
     position: relative;
+    
 }
 .titulos:before{
     background-color: #fff;
@@ -247,16 +266,48 @@ h2:after{
     top: 50%;
     z-index: -1;
 }
-#particles-js { /*hace que se integre mejor wl fondo particulas*/
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Coloca las partículas detrás del contenido principal */
+
+#particles-js {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: -1; /* Coloca las partículas detrás del contenido principal */
 }
-/* Estilos para pantallas pequeñas */
+
+
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
+    .header {
+        padding: 30px;
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón del menú en pantallas pequeñas */
+    }
+    .imageGrid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .btn1 {
+        padding: 12px 24px;
+    }
+
+    .popup {
+        padding: 30px;
+        width: 80%;
+    }
+
+    .titulos {
+        margin: 30px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .header {
         padding: 20px;
     }
@@ -264,29 +315,24 @@ h2:after{
     .menu-toggle {
         display: block; /* Muestra el botón del menú en pantallas pequeñas */
     }
+    
+    .imageGrid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 5px;
+        padding: 5px;
+    }
 
-    nav {
-        display: none; /* Oculta el menú en pantallas pequeñas */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #252859;
+    .btn1 {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .popup {
         padding: 20px;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-        z-index: 999;
+        width: 90%;
     }
 
-    nav.active {
-        display: flex; /* Muestra el menú cuando está activo */
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
+    .titulos {
+        font-size: 3.5em;
     }
 }
